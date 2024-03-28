@@ -5,9 +5,9 @@
 import {
   useState,
   useRef,
-  useCallback,
+  //useCallback,
   useEffect,
-  startTransition,
+  //startTransition,
   Suspense,
 } from 'react';
 import * as React from 'react';
@@ -18,7 +18,7 @@ import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 
 import {IconClose} from 'components/Icon/IconClose';
 import {IconHamburger} from 'components/Icon/IconHamburger';
-import {IconSearch} from 'components/Icon/IconSearch';
+//import {IconSearch} from 'components/Icon/IconSearch';
 import Search from 'components/AISearch';
 //import {Search} from 'components/Search';
 import {Logo} from '../../Logo';
@@ -121,7 +121,7 @@ function NavItem({url, isActive, children}: any) {
     </div>
   );
 }
-
+/*
 function Kbd(props: {children?: React.ReactNode; wide?: boolean}) {
   const {wide, ...rest} = props;
   const width = wide ? 'w-10' : 'w-5';
@@ -133,7 +133,7 @@ function Kbd(props: {children?: React.ReactNode; wide?: boolean}) {
     />
   );
 }
-
+*/
 export default function TopNav({
   routeTree,
   breadcrumbs,
@@ -205,16 +205,19 @@ export default function TopNav({
     return () => observer.disconnect();
   }, []);
 
-  const [showSearch, setShowSearch] = useState(false);
+  //const [showSearch, setShowSearch] = useState(false);
+  /*
   const onOpenSearch = useCallback(() => {
     startTransition(() => {
       setShowSearch(true);
     });
   }, []);
+  */
+  /*
   const onCloseSearch = useCallback(() => {
     setShowSearch(false);
   }, []);
-
+  */
   return (
     <>
       {/*
@@ -304,6 +307,7 @@ export default function TopNav({
               <div className="flex w-full md:hidden"></div>
               <div className="flex items-center -space-x-2.5 xs:space-x-0 ">
                 <div className="flex md:hidden">
+                  {/*
                   <button
                     aria-label="Search"
                     type="button"
@@ -311,6 +315,7 @@ export default function TopNav({
                     onClick={onOpenSearch}>
                     <IconSearch className="w-5 h-5 align-middle" />
                   </button>
+              */}
                 </div>
                 <div className="flex dark:hidden">
                   <button
