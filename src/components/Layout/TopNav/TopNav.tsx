@@ -19,7 +19,8 @@ import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import {IconClose} from 'components/Icon/IconClose';
 import {IconHamburger} from 'components/Icon/IconHamburger';
 import {IconSearch} from 'components/Icon/IconSearch';
-import {Search} from 'components/Search';
+import Search from 'components/AISearch';
+//import {Search} from 'components/Search';
 import {Logo} from '../../Logo';
 import {Feedback} from '../Feedback';
 import {SidebarRouteTree} from '../Sidebar';
@@ -216,11 +217,14 @@ export default function TopNav({
 
   return (
     <>
+      {/*
       <Search
         isOpen={showSearch}
         onOpen={onOpenSearch}
         onClose={onCloseSearch}
       />
+    */}
+
       <div ref={scrollDetectorRef} />
       <div
         className={cn(
@@ -261,6 +265,7 @@ export default function TopNav({
               </div>
             </div>
             <div className="items-center justify-center flex-1 hidden w-full md:flex 3xl:w-auto 3xl:shrink-0 3xl:justify-center">
+              {/*
               <button
                 type="button"
                 className={cn(
@@ -276,7 +281,8 @@ export default function TopNav({
                   </Kbd>
                   <Kbd>K</Kbd>
                 </span>
-              </button>
+                </button>*/}
+              <Search />
             </div>
             <div className="text-base justify-center items-center gap-1.5 flex 3xl:flex-1 flex-row 3xl:justify-end">
               <div className="mx-2.5 gap-1.5 hidden lg:flex">
