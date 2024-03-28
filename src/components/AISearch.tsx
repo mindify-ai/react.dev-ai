@@ -1,7 +1,7 @@
 import {MendableSearchBar} from '@mendable/search';
 
-// Read the api key from the environment
-const anon_key = process.env.REACT_APP_ANON_KEY;
+// Read the açpi key from the environment variables set in the .env file or server's environment
+const anon_key = process.env.MENDABLE_KEY;
 
 export default function Search() {
   // @ts-ignore
